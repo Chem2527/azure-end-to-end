@@ -25,3 +25,9 @@ Its good to apply NSG to subnets as same is applied to resources present inside 
 NSG ---> use case: all the resources in pub subnet able to access DB.
 ASG ----> we can group resources in pub subnet and only that particular resources able to access DB.
 Route table : How should traffic flow within a particular subnet.
+
+
+DevOps engineers create  additional subnet called app gateway subnet where they deploy LB and the responsibility is to load the balance and LB is configured with dns name of our application and it will be mapped to ip address of LB.
+
+
+
