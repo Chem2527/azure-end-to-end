@@ -19,4 +19,8 @@ VNET
 Vnet: logical isolation of network within the physical network of microsoft azure. usecase(requesting for vms in same az without vnet leds to hackinf of systems within tht physical server.)
 
 
-size can be measured in terms of ip addresses.
+size can be measured in terms of ip addresses. these can be defined in terms of CIDR.
+
+Its good to apply NSG to subnets as same is applied to resources present inside the subnet.
+NSG ---> use case: all the resources in pub subnet able to access DB.
+ASG ----> we can group resources in pub subnet and only that particular resources able to access DB.
