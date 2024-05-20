@@ -13,3 +13,10 @@ Standard_E16s_v3 ----> Running large databases, in-memory caching, and analytics
 Storage Optimized VMs
 
 Standard_L8s_v2 ---> Big data applications, data warehousing, and large-scale databases.
+
+VNET
+
+Vnet: logical isolation of network within the physical network of microsoft azure. usecase(requesting for vms in same az without vnet leds to hackinf of systems within tht physical server.)
+
+
+size can be measured in terms of ip addresses.
