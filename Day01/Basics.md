@@ -34,4 +34,7 @@ if users want to perform actions on azure they need identities either users,grou
 if one resource wants to access another they need identities like service principal or managed identity.
 
 
+service principal ---> we have to take care of security, rotation policy we have to maintain like for 90 days or for 360 days we have to change the certificates.
+managed identity---> azure will take care.
+
 
