@@ -30,4 +30,8 @@ Route table : How should traffic flow within a particular subnet.
 DevOps engineers create  additional subnet called app gateway subnet where they deploy LB and the responsibility is to load the balance and LB is configured with dns name of our application and it will be mapped to ip address of LB.
 
 
+if users want to perform actions on azure they need identities either users,groups,roles
+if one resource wants to access another they need identities like service principal or managed identity.
+
+
 
