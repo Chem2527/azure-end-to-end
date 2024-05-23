@@ -37,4 +37,26 @@ if one resource wants to access another they need identities like service princi
 service principal ---> we have to take care of security, rotation policy we have to maintain like for 90 days or for 360 days we have to change the certificates.
 managed identity---> azure will take care.
 
+vm needs to access blob which is created inside container
+
+need to create a role for storage account and add vm under members tab.
+
+connect to vm and run below commands
+
+sudo apt update
+
+Fetch the access token
+
+access_token=$(curl 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fstorage.azure.com%2F' -H Metadata:true | jq -r '.access_token')
+
+sudo apt update
+
+Access the blob from Virtual Machine
+
+Note: (replace storage accountname,containername,blobname)
+
+curl "https://$storage_account_name.blob.core.windows.net/$container_name/$blob_name" -H "x-ms-version: 2017-11-09" -H "Authorization: Bearer $access_token"
+
+
+
 
